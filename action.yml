@@ -1,0 +1,20 @@
+name: 'Send HTTP Request'
+inputs:
+  url:
+    required: true
+  method:
+    required: true
+    default: 'GET'
+  content-type:
+    required: true
+    default: 'application/json'
+  body:
+    required: false
+outputs:
+  status-code:
+    required: true
+  body:
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
